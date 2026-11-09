@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08070d">
+  <title>PARANOIA — Menu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="menu" aria-label="Menu principal de Paranoia">
+    <div class="background" aria-hidden="true"></div>
+    <div class="shade" aria-hidden="true"></div>
+    <div class="vignette" aria-hidden="true"></div>
+    <div class="crt-overlay" aria-hidden="true"></div>
+    <div class="radio-boot" id="radioBoot" aria-hidden="true"><div class="radio-boot-noise"></div><div class="tv-flash"></div></div>
+    <section class="content-warning" id="contentWarning" role="dialog" aria-modal="true" aria-labelledby="warningText">
+      <div class="content-warning-panel">
+        <p id="warningText">Este jogo contém luzes piscantes e alguns tópicos fortes, como trauma e uso de medicações controladas. Se você se sente desconfortável com algum desses aspectos, aconselhamos que feche o jogo.</p>
+        <div class="warning-language"><button type="button" id="warningLanguage">ENGLISH</button></div>
+        <div class="warning-actions">
+          <button type="button" id="warningProceed">Prosseguir</button>
+          <button type="button" id="warningExit">Sair</button>
+        </div>
+      </div>
+    </section>
+    <div class="new-game-scene" id="newGameScene" aria-hidden="true">
+      <img class="loading-eye" src="assets/eye-background.png" alt="">
+      <div class="loading-light" aria-hidden="true"></div>
+      <div class="loading-tip" id="loadingTip" aria-live="polite">Respirar te ajuda a se acalmar</div>
+      <img class="loading-candle" src="assets/candle-loading-new.gif" alt="Carregando">
+      <div class="chapter-card" id="chapterCard" aria-hidden="true">
+        <div class="chapter-card-shade"></div>
+        <div class="chapter-card-text">
+          <h2>Capítulo um</h2>
+          <p>Memórias do passado</p>
+        </div>
+        <div class="chapter-end-message" aria-live="polite">
+          <div class="chapter-end-message-panel">
+            <p>O jogo ainda está em desenvolvimento e esse primeiro capítulo será concluído em breve, obrigado pela sua atenção em nosso pequeno projeto!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="content">
+      <div class="title-float" aria-label="Paranoia">
+        <h1 class="title-sprite">
+          <img src="assets/title/P.png" alt="P">
+          <img src="assets/title/A1.png" alt="A">
+          <img src="assets/title/R.png" alt="R">
+          <img src="assets/title/A2.png" alt="A">
+          <img src="assets/title/N.png" alt="N">
+          <img src="assets/title/O.png" alt="O">
+          <img class="candle" src="assets/title/I_candle.png" alt="I">
+          <img src="assets/title/A3.png" alt="A">
+        </h1>
+      </div>
+
+      <nav class="main-menu" aria-label="Opções principais">
+        <button class="menu-button" data-action="new">NOVO JOGO</button>
+        <button class="menu-button" data-action="load">CARREGAR</button>
+        <button class="menu-button" data-action="settings">CONFIGURAÇÕES</button>
+      </nav>
+    </section>
+
+    <section class="settings-screen" id="settingsScreen" aria-label="Configurações" hidden>
+      <header class="settings-heading"><span></span><h2 data-i18n="settingsTitle">CONFIGURAÇÕES</h2><span></span></header>
+      <div class="settings-list" id="settingsList">
+        <div class="setting-row" data-setting="masterVolume"><span class="setting-label" data-i18n="masterVolume">volume geral</span><div class="setting-control"><button class="step" data-step="-10" aria-label="Diminuir volume geral">‹</button><input type="range" min="0" max="100" step="10" value="70" aria-label="Volume geral"><button class="step" data-step="10" aria-label="Aumentar volume geral">›</button><output>70%</output></div></div>
+        <div class="setting-row" data-setting="effectsVolume"><span class="setting-label" data-i18n="effectsVolume">volume de efeitos</span><div class="setting-control"><button class="step" data-step="-10" aria-label="Diminuir volume de efeitos">‹</button><input type="range" min="0" max="100" step="10" value="60" aria-label="Volume de efeitos"><button class="step" data-step="10" aria-label="Aumentar volume de efeitos">›</button><output>60%</output></div></div>
+        <div class="setting-row" data-setting="musicVolume"><span class="setting-label" data-i18n="musicVolume">volume da música</span><div class="setting-control"><button class="step" data-step="-10" aria-label="Diminuir volume da música">‹</button><input type="range" min="0" max="100" step="10" value="40" aria-label="Volume da música"><button class="step" data-step="10" aria-label="Aumentar volume da música">›</button><output>40%</output></div></div>
+        <div class="setting-row" data-setting="brightness"><span class="setting-label" data-i18n="brightness">brilho</span><div class="setting-control"><button class="step" data-step="-10" aria-label="Diminuir brilho">‹</button><input type="range" min="30" max="100" step="10" value="60" aria-label="Brilho"><button class="step" data-step="10" aria-label="Aumentar brilho">›</button><output>60%</output></div></div>
+        <div class="setting-row" data-setting="scale"><span class="setting-label" data-i18n="resolution">escala da tela</span><div class="setting-control"><button class="step" data-step="-1" aria-label="Diminuir escala">‹</button><output class="value-output">100%</output><button class="step" data-step="1" aria-label="Aumentar escala">›</button></div></div>
+        <div class="setting-row" data-setting="fullscreen"><span class="setting-label" data-i18n="fullscreen">tela cheia</span><div class="setting-control"><button class="step" data-toggle="fullscreen" aria-label="Alternar tela cheia"><span class="value-output">não</span></button></div></div>
+        <div class="setting-row" data-setting="language"><span class="setting-label" data-i18n="language">idioma</span><div class="setting-control"><button class="step" data-cycle="language"><span class="value-output">português</span></button></div></div>
+        <div class="setting-row" data-setting="screenEffects"><span class="setting-label" data-i18n="screenEffects">efeitos de tela</span><div class="setting-control"><button class="step" data-toggle="screenEffects"><span class="value-output">sim</span></button></div></div>
+        <div class="setting-row" data-setting="tips"><span class="setting-label" data-i18n="tips">dicas</span><div class="setting-control"><button class="step" data-toggle="tips"><span class="value-output">sim</span></button></div></div>
+      </div>
+      <div class="settings-footer"><button id="backButton" class="back-button">← <span data-i18n="back">voltar</span></button><span id="settingsNote" aria-live="polite"></span></div>
+    </section>
+
+    <section class="save-screen" id="saveScreen" aria-label="Carregar jogo" hidden>
+      <header class="save-topbar">
+        <button id="saveBackButton" class="back-button save-back-top">← <span>voltar</span></button>
+        <div class="save-heading"><span></span><h2>Carregar jogo</h2><span></span></div>
+        <div class="save-top-spacer" aria-hidden="true"></div>
+      </header>
+      <div class="save-slots" id="saveSlots" aria-label="Arquivos salvos"></div>
+      <footer class="save-footer">
+        <span class="save-hint">selecione um arquivo para carregar</span>
+        <button id="deleteSaveButton" class="back-button delete-footer">▤ <span>excluir arquivo</span></button>
+      </footer>
+      <div class="save-note" id="saveNote" aria-live="polite"></div>
+    </section>
+
+    <div class="message" role="status" aria-live="polite"></div>
+    <div class="version">PARANOIA <span>—</span> PROTÓTIPO</div>
+  </main>
+  <audio id="radioIntro" data-audio-type="music" data-base-volume="1" src="assets/audio/radio-intro.mp3" preload="auto"></audio>
+  <audio id="oldDollLoop" data-audio-type="music" data-base-volume="0.78" src="assets/audio/old-doll-loop.mp3" loop preload="auto"></audio>
+  <audio id="newGameAmbience" data-audio-type="music" src="assets/audio/new-game-ambience.mp3" loop preload="auto"></audio>
+  <audio id="chapterSoundscape" data-audio-type="music" data-base-volume="0.29" src="assets/audio/universified-soundscape.mp3" loop preload="auto"></audio>
+  <audio id="chapterWhoosh" data-audio-type="effect" data-base-volume="0.72" src="assets/audio/chapter-whoosh.mp3" preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+PARANOIA — MENU V63
+
+- O menu não inclui mais um save demonstrativo; os dez espaços começam vazios.
+- Sons de interface: um som único de hover e um som único de clique.
+- Os quatro efeitos de interface foram recortados para remover o silêncio inicial/final e reduzir o atraso percebido.
+- Os sons de interface usam cópias de reprodução independentes, evitando interrupções entre interações e após atualizar a tela de saves.
+- Os volumes continuam respeitando volume geral e volume de efeitos.
+
+Abra index.html em um navegador moderno.
+
+- A trilha começa com aproximadamente cinco segundos do som do rádio, em volume mais presente.
+- Nos últimos 0,5 segundo da interferência, Old Doll começa a tocar com uma transição gradual.
+- Depois que o rádio termina, Old Doll continua em repetição contínua.
+- As antigas músicas e o ambiente noturno foram removidos do pacote.
+- Os dois áudios respeitam os controles de volume geral e volume da música.
+
+
+Correções V52:
+- Fades de áudio agora usam um multiplicador independente dos volumes escolhidos.
+- Iniciar o jogo com volume geral ou de música em zero não prende a faixa em silêncio.
+- Aumentar os volumes durante a reprodução reaplica o volume configurado imediatamente.
+
+
+Correções V53:
+- Reorganizado o controle de volume: cada faixa calcula o volume atual a partir do volume geral, canal (música/efeitos), volume-base e fade.
+- Fades antigos são cancelados antes de iniciar uma nova transição na mesma faixa.
+- Ajustes de volume são reaplicados imediatamente em todas as faixas de áudio e vídeo.
+- Atualização dos textos das configurações ficou mais resistente a elementos ausentes, evitando que uma tradução interrompa a atualização dos controles.
+- Eventos dos controles de configuração foram simplificados e protegidos contra linhas inválidas.
+- Se Old Doll falhar ao iniciar, o estado interno permite uma nova tentativa em vez de marcar a música como iniciada para sempre.
+- Preferências antigas são normalizadas ao carregar, evitando valores inválidos.
+
+
+Correções V55:
+- A rotação das dicas agora tem temporizador iniciado sempre que a tela de carregamento aparece; a opção de dicas pode ser ativada ou desativada mesmo depois de entrar nessa tela.
+- O texto atual continua acompanhando o idioma selecionado.
+- A imagem do olho recebeu um balanço lento e sutil de um lado para o outro, com pequenas inclinações, mantendo as luzes piscantes existentes.
+
+
+Correção V57:
+- A ambiência da tela de carregamento agora toca em loop enquanto a tela estiver ativa.
+
+
+Atualizações V58:
+- Dez segundos após a entrada na tela de carregamento, a imagem escurece e surge a cartela central do capítulo: “Capítulo um” / “Memórias do passado”.
+- A cartela entra e desaparece sincronizada com o efeito sonoro de whoosh.
+- O whoosh foi configurado para tocar a 50% da velocidade original (aproximadamente o dobro da duração).
+- A paisagem sonora “Universified Soundscape” começa junto da cartela, em volume de fundo reduzido, e permanece em loop enquanto a tela de carregamento estiver ativa.
+- Os dois novos áudios respeitam os controles de volume geral e de música/efeitos.
+
+
+Atualizações V59:
+- Dez segundos após a entrada na tela de carregamento, a tela escurece completamente enquanto a música de carregamento diminui gradualmente até parar.
+- Depois do apagão, começa a tocar em volume baixo a paisagem sonora Universified Soundscape.
+- A apresentação acontece em duas etapas: primeiro aparece apenas “Capítulo um”; ele desaparece antes de surgir “Memórias do passado”.
+- O whoosh em 50% da velocidade original acompanha somente a entrada de “Memórias do passado”.
+- Ao final, o subtítulo desaparece, a paisagem sonora e o whoosh terminam em fade-out e a tela permanece preta e silenciosa.
+
+
+Versão 60:
+- A paisagem sonora começa a partir do segundo 4 do arquivo de áudio, mantendo o fade-in gradual.
+- “Memórias do passado” aparece maior e com o bloco de texto centralizado sem deslocamento vertical.
+
+
+Atualizações V63:
+- “Memórias do passado” permanece visível por 1,5 segundo a menos antes do apagão final.
+- Depois que o subtítulo desaparece, a paisagem sonora e o whoosh terminam seus fades; a tela fica completamente preta e silenciosa.
+- Só depois do apagão e do silêncio aparece uma mensagem final centralizada, com o mesmo estilo visual do aviso inicial e sem botões.
+- A mensagem final acompanha o idioma selecionado: português ou inglês.
